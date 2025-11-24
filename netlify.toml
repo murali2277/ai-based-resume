@@ -3,6 +3,13 @@
   publish = "public"
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@google/generative-ai", "cors", "dotenv", "express", "multer", "pdf-parse", "serverless-http"]
+
+[build.environment]
+  NPM_FLAGS = "--production=true" # Ensures only production dependencies are installed for functions
+
 # Redirects for single-page applications or clean URLs (optional)
 # [[redirects]]
 #   from = "/*"
