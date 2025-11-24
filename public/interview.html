@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-Based Resume-to-Role Interview Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ai-particles"></div> <!-- Assuming this is for the background animation -->
+  <header>
+    <div class="header-top">
+      <div class="logo-container">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHJ4PSIxMiIgZmlsbD0iI2ZmZiIvPjxjaXJjbGUgY3g9IjI4IiBjeT0iMjgiIHI9IjE2IiBmaWxsPSIjMWFiYzViIi8+PHBhdGggZD0iTTI4IDM2Yy02IDAtOC02LTgtOCBhOCA4IDAgMCAxIDE2IDAgYzAgMi02IDggOCA4IiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iMzYiIHk9IjE2IiB3aWR0aD0iOCIgIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMWFiYzViIi8+PHJlY3QgeD0iMTIiIHk9IjE2IiB3aWR0aD0iOCIgIGhlaWdodD0iMTIiIHJ4PSIzIiBmaWxsPSIjMWFiYzViIi8+PC9zdmc+" alt="AI Interview Simulator Logo" class="logo-img" />
+        <div class="logo-pulse"></div>
+      </div>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="interview.html" class="nav-link active">Start Interview</a> <!-- Added active class -->
+        <a href="demo.html" class="nav-link">Demo</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+    <h1>AI-Based Resume-to-Role Interview Simulator</h1>
+  </header>
+
+  <main>
+
+    <section id="upload" class="upload-box">
+      <h3>File Upload</h3>
+      <div class="upload-area">
+        <input type="file" id="resumeUpload" name="resume" accept=".pdf" style="display: none;">
+        <label for="resumeUpload">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          Click or drag file to this area to upload
+        </label>
+      </div>
+      <p class="formats">Format accepted is .pdf</p>
+      <div class="sample-template">
+        <a href="#" onclick="alert('Sample template download not implemented')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          Download Sample Template
+        </a>
+      </div>
+      <div class="buttons">
+        <button class="cancel">Cancel</button>
+        <button class="continue">Continue</button>
+      </div>
+    </section>
+
+    <section id="role-selection">
+      <h2>Select a Role to Practice</h2>
+      <div class="role-buttons">
+          <button data-role="Software Engineer">Software Engineer</button>
+          <button data-role="Project Manager">Project Manager</button>
+          <button data-role="Data Analyst">Data Analyst</button>
+          <button data-role="Marketing Specialist">Marketing Specialist</button>
+          <button data-role="Customer Support Representative">Customer Support Representative</button>
+          <button data-role="Human Resources Manager">HR Manager</button>
+      </div>
+    </section>
+
+    <section id="interview-section" style="display: none;">
+        <h2 id="current-role-title"></h2>
+        <div class="question-container">
+            <p id="question-display"></p>
+            <textarea id="answer-input" placeholder="Type your answer here..." rows="8"></textarea>
+            <button id="submit-answer-btn">Submit Answer</button>
+        </div>
+        <div class="feedback-container">
+            <h3>Feedback:</h3>
+            <p id="feedback-display"></p>
+        </div>
+        <div class="navigation-buttons">
+            <button id="prev-question-btn" style="display: none;">Previous Question</button>
+            <button id="next-question-btn" style="display: none;">Next Question</button>
+            <button id="finish-interview-btn" style="display: none;">Finish Interview</button>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:mithunmithun8461@gmail.com" class="email-link">mithunmithun8461@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 AI-Based Resume-to-Role Interview Simulator.</p>
+  </footer>
+
+  <script src="interview-script.js"></script>
+  <script src="script.js"></script> <!-- Main script for global animation etc. -->
+</body>
+</html>

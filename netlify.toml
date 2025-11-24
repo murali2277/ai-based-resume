@@ -1,0 +1,10 @@
+[build]
+  command = "echo 'No client-side build command needed for this project'"
+  publish = "public"
+  functions = "netlify/functions"
+
+# Redirects for single-page applications or clean URLs (optional)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
